@@ -1,0 +1,22 @@
+# checkpoint 参数
+checkpointTime: 60000
+checkpointPause: 5000
+checkpointTimeout: 120000
+checkpointPath: file:///cloudminds/bigdata/flink/flink-checkpoints/project/
+maxConcurrentCheckpoint: 1
+
+# 数据库参数 pg schema不同单独创建一项,MySQL不用传schema
+sourceType: mysql
+hostname: 172.16.31.1
+port: 31541
+username: bigdata_sync_r
+password: bigdata_sync_r
+data:
+  -  database: roc
+     tables: t_robot
+
+kafka:
+  - type: data
+    topic: data
+    servers: hadoop2.test.cloudminds.com:9092
+    transaction.timeout.ms: 900000

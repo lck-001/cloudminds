@@ -1,0 +1,27 @@
+#http连接参数
+token_url: https://v3-ali.blacklake.cn/api/openapi/domain/web/v1/system/_refreshToken
+station_list_url: https://v3-ali.blacklake.cn/api/resource/domain/web/v1/resources/screen/list
+produce_task_url: https://v3-ali.blacklake.cn/api/mfg/domain/web/v1/produce_task/_list
+progress_report_url: https://v3-ali.blacklake.cn/api/mfg/domain/web/v1/progress_report/_list
+app_key: bidata_jkzh
+app_secret: $argon2id$v=19$m=65536,t=1,p=4$hcJIjgMaleMnplCJ0HXQZIWri2QY2nFSSutbDwGZ8CboktEV0ItwG2815fvp82KS9JAT5SL8DXKkTosQd8Pp9ZmT5vmtlYmGZzdB2NpVG26jr3YM/NR6glRmXIAp4D/lrGtK0qLpt35nRGy1iO+LckystV5lBioTzK47JUotI/A$N4YmQ1RRvPfoK2oh7F0/asP+pOsG4uA2uJ0E/BngJvh3U8f5ZZ5Wdh1DhVgZHNSiBPLWN4vN6DpeA0WiORE05zjtUC8RCPvn4Pi4JdUKvcMtts+Ci+pBs9n7INO3LDZSaP1KqSGnT17DCI909wD8yCZxurZO9YAbIf09dMuRuO/43MeErXXo4pc6E05fR6gIqO1nD91qpF5b3tiaCxDtCL53BKgYkcKETR8LpfV9qYkWoe+Q0x0n0s1Calj7k2sVXZpZ4t9GwmwGQHKcROYU4HBP/W4WHD0H5nPL4vjLuFplO4bG4EewzHBIg9yMdhoxZK9fiuPSZWsklxvOxYXcTQ
+factoryNumber: 03065911
+page: 1
+size: 50
+update_from: 1680883200000
+update_to: 1680969600000
+request_interval: 3600000
+
+#clickhouse连接地址
+#clickhouse_url: jdbc:clickhouse://clickhouse.cloudminds.com:9090/
+#clickhouse_username: distributed-write
+#clickhouse_password: CloudMinds#
+
+clickhouse_url: jdbc:clickhouse://10.11.33.163:8125/ceph_meta
+clickhouse_username: chengkang
+clickhouse_password: chengkang123
+
+#checkpoint存储位置
+fs_stateBackend: hdfs://nameservice1/tmp/http_blacklake
+
+

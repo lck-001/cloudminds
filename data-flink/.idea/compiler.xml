@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="iceberg-flink-test" />
+        <module name="data-flink-nats" />
+        <module name="FeishuTable" />
+        <module name="iceberg-spark-test" />
+        <module name="data-flink-reportMetrics" />
+        <module name="data-flink-BI" />
+        <module name="flink-connector-mqtt" />
+        <module name="Flink-HBase" />
+        <module name="flink-connector-http-table" />
+        <module name="flink-connector-mongodb" />
+        <module name="iceberg_test" />
+        <module name="flink-sql-connector-mqtt" />
+        <module name="flink-connector-socket" />
+        <module name="data-flink-ceph" />
+        <module name="data-flink-mqtt" />
+        <module name="iceberg-spark-dev" />
+        <module name="data-flink-http" />
+        <module name="data-flink-robot" />
+        <module name="iceberg-spark-demo" />
+        <module name="icberg-flink-demo" />
+        <module name="iceberg-demo" />
+        <module name="flink-connector-http" />
+        <module name="flink-sql-udf" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="data-flink-http-weather" target="7" />
+      <module name="data-flink-mongo" target="1.5" />
+      <module name="data-flink-nats-test" target="8" />
+      <module name="data-flink-test" target="6" />
+      <module name="env_test" target="1.5" />
+      <module name="FeiShu-Table" target="1.5" />
+      <module name="flink-cdc-connectors" target="1.5" />
+      <module name="java_test" target="1.5" />
+      <module name="SQL" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

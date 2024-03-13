@@ -1,0 +1,43 @@
+-- cdmdwd.dwd_crio_tmd_t_task_log_a_d genger机器人日志
+create external table cdmdwd.dwd_crio_tmd_t_task_log_a_d (
+     log_id string comment '日志id',
+     task_id string comment '任务ID',
+     uuid string comment '任务uuid,随上报的任务状态变更时带上来的',
+     task_uuid string comment '任务uuid,随上报的任务状态变更时带上来的',
+     tenant_id string comment '租户id',
+     tenant_name string comment '租户名称',
+     robot_is_del int comment '机器人状态:1删除 0正常',
+     robot_type string comment '机器人类型',
+     robot_id string comment '机器人id',
+     robot_name string comment '机器人名称',
+     rcu_id string comment 'rcuid',
+     rcu_name string comment 'rcu名称',
+     map_code string comment '所属地图编码',
+     map_name string comment '所属地图名称',
+     work_type int comment '任务类型',
+     work_type_name string comment '任务类型名称',
+     task_code string comment '任务编码',
+     task_name string comment '任务名称',
+     schedule_start_time string comment '任务计划执行时间',
+     start_time string comment '开始时间',
+     end_time string comment '结束时间',
+     status int comment '任务状态',
+     status_name string comment '任务状态名称',
+     task_mode int comment '0：机器人发起，1：CROSS发起，2：语音发起',
+     task_mode_name string comment '任务模型名称',
+     create_time string comment '创建时间',
+     update_time string comment '更新时间',
+     record_state int comment '录制状态',
+     record_state_name string comment '录制状态名称',
+     work_data string comment '工作数据',
+     error_code string comment '错误码',
+     error_message string comment '错误信息',
+     error_detail string comment '错误详情',
+     biz_type int comment '业务类型: 0-智能服务机器人 1-快递通系统',
+     biz_type_name string comment '业务类型名称',
+     event_time string comment '事件时间',
+     k8s_env_name string comment '数据来源环境'
+)
+comment 'genger机器人日志'
+stored as parquet
+location '/data/cdmdwd/dwd_crio_tmd_t_task_log_a_d';

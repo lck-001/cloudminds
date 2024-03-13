@@ -1,0 +1,18 @@
+#http_app连接信息
+app_id: cli_a24e455d667b500c
+app_secret: OMBShEjrNTINIphrIZ8mphWOSAdf1ES2
+
+#http连接参数
+app_token: bascnWzjaZo0UVBgC9xV03PIhtF
+table_id: tblPacCU62384gD9
+view_id: vew2WL3bii
+#http_filter: CurrentValue.[巡检时间]>=TODAY()-8&&CurrentValue.[巡检时间]<TODAY()-7
+
+#clickhouse连接地址
+clickhouse_url: jdbc:clickhouse://10.11.33.58:8125/ceph_meta
+clickhouse_username: chengkang
+clickhouse_password: chengkang123
+clickhouse_tablename: ceph_meta.dwd_after_sales_records
+
+#checkpoint存储位置
+fs_stateBackend: hdfs://nameservice1/tmp/http_inspection

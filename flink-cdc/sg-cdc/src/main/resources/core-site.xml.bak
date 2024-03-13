@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+
+    <property>
+        <name>google.cloud.auth.service.account.enable</name>
+        <value>true</value>
+    </property>
+    <!-- Turn security off for tests by default -->
+    <property>
+        <name>fs.gs.impl</name>
+        <value>com.google.cloud.hadoop.fs.gcs.GoogleHadoopFileSystem</value>
+    </property>
+    <property>
+        <name>fs.AbstractFileSystem.gs.impl</name>
+        <value>com.google.cloud.hadoop.fs.gcs.GoogleHadoopFS</value>
+    </property>
+    <property>
+        <name>google.cloud.auth.service.account.json.keyfile</name>
+        <value>/data/flink-1.9.1/conf/gcs-service-account.json</value>
+    </property>
+    <property>
+        <name>fs.gs.project.id</name>
+        <value>XXX</value>
+        <description>
+            Required. Google Cloud Project ID with access to configured GCS buckets.
+        </description>
+    </property>
+</configuration>

@@ -1,0 +1,2 @@
+dwd_harix_cmd_reception_send_qa_i_d|question_id
+dwd_cms_svo_user_qa_i_d|user_qa_id

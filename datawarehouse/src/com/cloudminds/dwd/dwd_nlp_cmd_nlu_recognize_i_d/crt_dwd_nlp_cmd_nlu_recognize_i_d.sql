@@ -1,0 +1,48 @@
+-- cdmdwd.dwd_nlp_cmd_nlu_recognise_i_d asr请求nlu处理识别文本返回意图
+create external table cdmdwd.dwd_nlp_cmd_nlu_recognize_i_d (
+    question_id string comment '请求id',
+    robot_id string comment '机器人id',
+    robot_type string comment '机器人类型',
+    robot_account_id string comment '机器人账户，roc系统中创建的机器人账号',
+    sv_agent_id string comment 'smart voice 的agent id',
+    sv_agent_name string comment 'smart voice 的agent名称',
+    algo string comment '算法类型',
+    cost int comment 'asr请求nlu处理消耗时延，毫秒',
+    matched_template_id string comment '命中得模板id',
+    matched_template string comment '命中得模板',
+    domain_id string comment '事件类型',
+    domain_name string comment '机器人命中得domain',
+    intent_id string comment '意图id',
+    intent_name string comment '意图',
+    env_info string comment 'nlu环境信息',
+    before_context string comment '之前请求的文本内容，环境上下文?',
+    in_context string comment '当前请求的文本内容，环境上下文?',
+    out_context string comment '输出上下文?',
+    param_info string comment '请求的参数信息?',
+    parameters string comment '请求的参数?',
+    qa_result string comment 'qa 结果',
+    fqa_cate_id string comment 'fqa问题的答案分类id',
+    user_qa_cate_id string comment 'user qa问题的答案分类id',
+    question_group_id string comment '问题的分组id',
+    sim_question_score decimal(18,16) comment '问题匹配相似度',
+    question_text string comment '识别出的文本,nlu处理识别的文本',
+    answer_text string comment 'nlu处理识别的文本后返回的意图文本',
+    session_id string comment 'session id',
+    qa_from string comment '提供qa服务的模块',
+    is_hi int comment '是否是座席，1-true，0-false',
+    vpr_id string comment '声纹id',
+    emotion string comment '情感',
+    is_rc int comment 'rc是调用技能是否成功,1-调用技能成功，0-调用技能未成功',
+    supplier string comment 'qa服务提供者',
+    supplier_type string comment 'qa服务提供者类型',
+    third_cost int comment '第三方服务耗时,毫秒',
+    third_session_id string comment '第三方服务session id',
+    k8s_svc_name string comment 'k8s smart voice control 名称',
+    k8s_env_name string comment 'k8s环境名称',
+    event_time string comment '事件发生时时间',
+    ext string comment '保留的原始数据'
+)
+comment 'asr请求nlu处理识别文本返回意图'
+partitioned by(dt string comment 'dt分区字段')
+stored as parquet
+location '/data/cdmdwd/dwd_nlp_cmd_nlu_recognize_i_d';

@@ -1,0 +1,26 @@
+#hbase连接地址
+hbase_zookeeper_quorum: 172.16.23.37,172.16.23.38,172.16.23.39
+hbase_zookeeper_client_port: 2181
+
+#kafka连接地址
+kafka_source_quorum: bigdata4:9092,bigdata5:9092,bigdata6:9092
+kafka_source_topic: ceph_nginx_log_prod
+kafka_source_group: ceph-nginx-log-prod-test
+kafka_sink_quorum: 10.11.33.58:9092
+kafka_sink_topic:
+
+#clickhouse连接地址
+#clickhouse_url: jdbc:clickhouse://clickhouse.cloudminds.com:9090/ceph_meta
+clickhouse_url: jdbc:clickhouse://172.16.32.96:9090/ceph_meta
+clickhouse_username: distributed-write
+clickhouse_password: CloudMinds#
+clickhouse_tablename: ceph_meta.dwd_ceph_nginx_log
+
+#IP解析文件地址
+ip_file_path: hdfs://nameservice1/user/hive/spark_job_lib/cloud/GeoLite2-City.mmdb
+
+#checkpoint存储位置
+fs_stateBackend: hdfs://nameservice1/tmp/ceph
+
+#hdfs存储路径
+hdfs_file_path: hdfs://nameservice1/data/cdmods/ods_crio_event_ceph_i_d/

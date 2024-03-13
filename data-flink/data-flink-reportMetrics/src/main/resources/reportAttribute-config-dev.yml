@@ -1,0 +1,23 @@
+#kafka连接地址
+kafka_source_quorum: bigdata4:9092,bigdata5:9092,bigdata6:9092
+kafka_source_topic: cloud_logs_roc-operation
+kafka_source_group: cloud_logs_roc-operation_test_01
+
+#clickhouse连接地址
+#clickhouse_url: jdbc:clickhouse://clickhouse.cloudminds.com:9090/ceph_meta
+#clickhouse_url: jdbc:clickhouse://172.16.32.96:9090/ceph_meta
+#clickhouse_username: distributed-write
+#clickhouse_password: CloudMinds#
+#clickhouse_tablename: ceph_meta.dwd_ceph_nginx_log
+#clickhouse_url: jdbc:clickhouse://10.11.33.163:8125/ceph_meta
+#clickhouse_username: chengkang
+#clickhouse_password: chengkang123
+#clickhouse_tablename: ceph_meta.dwd_roc_report_metrics_new
+
+clickhouse_url: jdbc:clickhouse://172.16.24.226:8123
+clickhouse_username: default
+clickhouse_password: 123456
+clickhouse_tablename: test.dwd_roc_report_attribute
+
+#checkpoint存储位置
+fs_stateBackend: hdfs://nameservice1/tmp/reportMetrics/${now}

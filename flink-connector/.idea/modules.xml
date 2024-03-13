@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/flink-connector.iml" filepath="$PROJECT_DIR$/flink-connector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-connector-http/flink-connector-http.iml" filepath="$PROJECT_DIR$/flink-connector-http/flink-connector-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-connector-http-table/flink-connector-http-table.iml" filepath="$PROJECT_DIR$/flink-connector-http-table/flink-connector-http-table.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-connector-mongodb/flink-connector-mongodb.iml" filepath="$PROJECT_DIR$/flink-connector-mongodb/flink-connector-mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-connector-mqtt/flink-connector-mqtt.iml" filepath="$PROJECT_DIR$/flink-connector-mqtt/flink-connector-mqtt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-connector-socket/flink-connector-socket.iml" filepath="$PROJECT_DIR$/flink-connector-socket/flink-connector-socket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../flink-sql-connector/flink-sql-connector.iml" filepath="$PROJECT_DIR$/../flink-sql-connector/flink-sql-connector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flink-sql-connector-mqtt/flink-sql-connector-mqtt.iml" filepath="$PROJECT_DIR$/flink-sql-connector-mqtt/flink-sql-connector-mqtt.iml" />
+    </modules>
+  </component>
+</project>

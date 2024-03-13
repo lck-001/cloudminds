@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="flink-connector-clickhouse-1.14.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/test/src/main/resources/lib/flink-connector-clickhouse-1.14.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

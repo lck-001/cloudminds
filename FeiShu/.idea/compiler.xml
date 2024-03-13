@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="feishutest" />
+        <module name="env_test" />
+        <module name="FeishuTable" />
+        <module name="test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="chatgpt" target="1.5" />
+      <module name="data-flink-reportMetrics-test" target="8" />
+      <module name="data-flink-test" target="1.5" />
+      <module name="env_test" target="1.5" />
+      <module name="FeiShu" target="1.8" />
+      <module name="feishu-test" target="1.8" />
+      <module name="FeishuTable" target="8" />
+      <module name="feishutest" target="1.8" />
+      <module name="flink-feishu" target="1.8" />
+      <module name="flink-nats" target="1.5" />
+      <module name="test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

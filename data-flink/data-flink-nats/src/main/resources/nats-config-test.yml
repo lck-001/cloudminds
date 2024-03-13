@@ -1,0 +1,9 @@
+#nats连接地址
+nats_url: nats://172.16.23.85:30243
+nats_topic: ck
+
+#clickhouse连接地址
+clickhouse_url: jdbc:clickhouse://172.16.32.96:9090/ceph_meta
+clickhouse_username: distributed-write
+clickhouse_password: CloudMinds#
+clickhouse_tablename: harix.dwd_ue_location

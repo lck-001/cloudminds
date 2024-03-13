@@ -1,0 +1,71 @@
+# checkpoint 参数
+checkpointTime: 60000
+checkpointPause: 5000
+checkpointTimeout: 120000
+#checkpointPath: hdfs://nameservice1/cloudminds/bigdata/flink/checkpoints/project/
+checkpointPath: hdfs://cdh-master.cloudminds.com/tmp/flink/checkpoints/project/
+#checkpointPath: hdfs://nameservice1/tmp/flink/checkpoints/project/
+maxConcurrentCheckpoint: 1
+
+# 默认使用basepath 库名 表名存放数据,传入hdfssavepath则需要拼接此路径
+basePath: hdfs://cdh-slave01.cloudminds.com:8020/data/cdmods
+tablePath:
+  -  database: crss_task
+     table: t_task_log
+     path: ods_crio_db_c0010_t_task_log_i_d
+  -  database: crss_task
+     table: t_task_route
+     path: ods_crio_db_c0010_t_task_route_i_d
+  -  database: crss_task
+     table: t_task
+     path: ods_crio_db_c0010_t_task_i_d
+
+# 数据库参数 pg schema不同单独创建一项,MySQL不用传schema
+# startupOptions 没传默认是快照+持续更新 取值范围  initial,EARLIEST_OFFSET,LATEST_OFFSET,SPECIFIC_OFFSETS,TIMESTAMP
+excludeColumns: db,table,event_time
+dataEnv: bj-prod-232
+sourceType: mysql
+startupOptions:
+  startType: initial
+  #filename: mysql-master-bin.001999
+  #offset: 24184690
+hostname: 172.16.31.96
+port: 30117
+username: trans_crss
+password: epecE1Dj
+data:
+  -  database: crss_task
+     tables: t_task_log,t_task_route,t_task
+
+kafka:
+  - type: data
+    topic: data
+    servers: hadoop2.test.cloudminds.com:9092
+    transaction.timeout.ms: 900000
+  - type: schema
+    topic: schema
+    servers: hadoop2.test.cloudminds.com:9092
+    transaction.timeout.ms: 900000
+
+kafkaTable:
+  - database: crss_cxms
+    table: t_robot_type
+    topic: ${db}_${table}
+    partition: "0"
+jdbc:
+  jdbcDriver: com.clickhouse.jdbc.ClickHouseDriver
+  #    jdbcDriver: com.mysql.cj.jdbc.Driver
+  url: jdbc:clickhouse://clickhouse.cloudminds.com:9090?useSSL=false&rewriteBatchedStatements=true
+  username: distributed-write
+  password: CloudMinds#
+  batchSize: 100
+  maxRetries: 3
+  batchInterval: 6000
+# sql 查询语句必须带上库名称
+jdbcTable:
+  - sinkDatabase: cross
+    sinkTable: dwd_task_node_log
+    sql: >
+      select
+       *
+      from crss_task.t_task_node_log

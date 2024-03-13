@@ -1,0 +1,40 @@
+-- cdmdim.dim_umd_customer_sh_d 客户信息
+create external table cdmdim.dim_umd_customer_sh_d(
+     customer_id string comment '客户id,使用客户code码',
+     customer_name string comment '客户名称',
+     pid string comment '客户父级',
+     level int comment '当前客户层级',
+     region string comment '客户所在区域',
+     address string comment '客户地址',
+     website string comment '客户网址',
+     industry_id string comment '客户所属行业编码',
+     nature_code string comment '客户性质编码',
+     nature_name string comment '客户性质名称',
+     credit_code string comment '客户信用编码',
+     credit_name string comment '客户信用名称',
+     source_code string comment '客户来源编码',
+     source_name string comment '客户来源名称',
+     scale_code string comment '公司规模编码',
+     scale_name string comment '公司规模名称',
+     status_code string comment '客户行业地位编码',
+     status_name string comment '客户行业地位名称',
+     contact_code string comment '联系策略编码',
+     contact_name string comment '联系策略名称',
+     purchase_code string comment '客户购买策略编码',
+     purchase_name string comment '客户购买策略名称',
+     employment_code string comment '客户从业时间编号',
+     employment_name string comment '客户从业时间名称',
+     settlement_code string comment '结算方式编码',
+     settlement_name string comment '结算方式名称',
+     employer_num int comment '客户员工数量',
+     category_code string comment '客户类别编码',
+     category_name string comment '客户类别名称',
+     create_time string comment '客户创建时间',
+     update_time string comment '客户更新时间',
+     start_time string comment '客户更新时间',
+     end_time string comment '客户信息有效结束时间',
+     k8s_env_name string comment '环境'
+)
+comment '客户信息'
+partitioned by(dt string comment 'dt分区字段')
+stored as parquet;
